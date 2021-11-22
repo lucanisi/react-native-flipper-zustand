@@ -4,7 +4,7 @@ export declare type StateSelector<T extends State, U> = (state: T) => U;
 export declare type EqualityChecker<T> = (state: T, newState: unknown) => boolean;
 export declare type StateListener<T> = (state: T, previousState: T) => void;
 export declare type StateSliceListener<T> = (slice: T, previousSlice: T) => void;
-export declare type SetState<T extends State> = (partial: PartialState<T>, replace?: boolean) => void;
+export declare type SetState<T extends State> = (partial: PartialState<T>, replace?: boolean, actionName?: string) => void;
 export declare type GetState<T extends State> = () => T;
 export declare type Destroy = () => void;
 export interface Subscribe<T extends State> {
